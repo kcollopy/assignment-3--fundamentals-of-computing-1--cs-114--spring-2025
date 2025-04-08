@@ -19,9 +19,9 @@ public class Matrix {
     for(int row = 0; row < matrixLength; row++){
       for( int col = 0; col < matrixLength; col++){
 
-        //if(col + row == matrixLength - 1){
-          //System.out.print(matrix[row][col] highlighted in yellow);
-        //}else{
+        if(col + row == matrixLength - 1){
+          System.out.print( + matrix[row][col]);
+        }else{
           System.out.print(matrix[row][col] + "\t");
         }
         System.out.println();
