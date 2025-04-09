@@ -13,6 +13,8 @@ public class Matrix {
     matrix[x1][y1] = matrix[x2][y2];
     matrix[x2][y2] = amatrix;
   }
+  final String YELLOW = "\u001B[33m";
+  final String RESET = "\u001B[0m";
 
   public void printMatrix(){
 
@@ -20,13 +22,14 @@ public class Matrix {
       for( int col = 0; col < matrixLength; col++){
 
         if(col + row == matrixLength - 1){
-          System.out.print( + matrix[row][col]);
+          System.out.print( YELLOW + matrix[row][col] + "\t");
         }else{
-          System.out.print(matrix[row][col] + "\t");
+          System.out.print( RESET + matrix[row][col] + "\t");
         }
-        System.out.println();
       }
+      System.out.println();
     }
+  }
 
   public void populateMatrix(){
     for(int row = 0; row < matrixLength; row++){
@@ -50,7 +53,7 @@ public class Matrix {
         if (row + col < matrixLength - 1) {
           swap(row, col, swapRow, swapCol);
         }
-     }
+      }
     }
   }
 }
