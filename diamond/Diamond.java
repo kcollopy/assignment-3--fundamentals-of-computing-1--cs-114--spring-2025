@@ -49,7 +49,7 @@ public class Diamond {
       //Top half of the diamond
       System.out.println(" ".repeat(diamondSize) + "*");
 
-      for(int i = 1; i <= diamondSize; i += 2){
+      for(int i = 1; i < diamondSize; i += 2){
         System.out.println(" ".repeat(numberOfSpaces) + " *".repeat(numberOfCharacters));
 
         numberOfSpaces -= 2;

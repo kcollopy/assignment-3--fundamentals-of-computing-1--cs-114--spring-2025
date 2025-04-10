@@ -19,17 +19,18 @@ public class RunMatrix {
     Matrix matrix = new Matrix(size);
     System.out.println();
 
-    System.out.println("Printing matrix with default values: \n");
+    System.out.println("Printing matrix with default values:");
     matrix.printMatrix();
     System.out.println();
 
-    System.out.println("Printing matrix: \n");
+    System.out.println("Populating matrix...matrix populated \n");
+    System.out.println("Printing matrix:");
     matrix.populateMatrix();
     matrix.printMatrix();
     System.out.println();
 
     System.out.println("Printing matrix...matrix flipped \n");
-    System.out.println("Printing flipped matrix: \n");
+    System.out.println("Printing flipped matrix:");
     matrix.flipMatrix();
     matrix.printMatrix();
     System.out.println();
