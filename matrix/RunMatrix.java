@@ -6,16 +6,18 @@ public class RunMatrix {
 
     Scanner scan = new Scanner(System.in);
 
-    System.out.println("Please enter the size of your matrix: ");                   //validate user input
+    System.out.print("Please enter the size of your matrix: ");
     size = scan.nextInt();
+    System.out.println();
 
     while(size < 1){
-      System.out.println("Invalid input please reenter an integer: ");
+      System.out.println("Invalid input please re-enter an integer: ");
       size = scan.nextInt();
     }
     scan.close();
 
     Matrix matrix = new Matrix(size);
+    System.out.println();
 
     System.out.println("Printing matrix with default values: \n");
     matrix.printMatrix();
@@ -26,7 +28,7 @@ public class RunMatrix {
     matrix.printMatrix();
     System.out.println();
 
-    System.out.println("Printing matix...matrix flipped");
+    System.out.println("Printing matrix...matrix flipped \n");
     System.out.println("Printing flipped matrix: \n");
     matrix.flipMatrix();
     matrix.printMatrix();

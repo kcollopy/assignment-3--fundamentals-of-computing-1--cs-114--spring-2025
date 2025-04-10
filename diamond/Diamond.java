@@ -6,20 +6,23 @@ public class Diamond {
 
     Scanner scan = new Scanner(System.in);
 
-    System.out.println("Enter an integer greater than 0: ");
-    diamondSize = scan.nextInt();                               //validate user input
+    System.out.print("Enter an integer greater than 0: ");
+    diamondSize = scan.nextInt();
+    System.out.println();
 
     while(diamondSize < 1){
-      System.out.println("Invalid input please reenter an integer greater than 0: ");
+      System.out.println("Invalid input please re-enter an integer greater than 0: ");
       diamondSize = scan.nextInt();
     }
     scan.close();
 
-    if(diamondSize%2 == 1){                                                  //odd diamond
+    //Odd diamond
+    if(diamondSize%2 == 1){
       numberOfSpaces = (diamondSize - 1)/2;
       numberOfCharacters = 1;
 
-      for(int i = 1; i <= diamondSize; i += 2){                              //top half of diamond
+      //Top half of the diamond
+      for(int i = 1; i <= diamondSize; i += 2){
         System.out.println(" ".repeat(numberOfSpaces) + "*".repeat(numberOfCharacters));
 
         numberOfSpaces--;
@@ -29,7 +32,8 @@ public class Diamond {
       numberOfSpaces++;
       numberOfCharacters -= 2;
 
-      for(int i = 1; i < diamondSize; i += 2){                             //bottom half of diamond
+      //Top half of the diamond
+      for(int i = 1; i < diamondSize; i += 2){
         numberOfSpaces++;
         numberOfCharacters -= 2;
 
@@ -37,9 +41,12 @@ public class Diamond {
       }
     }
 
-    if(diamondSize%2 == 0){                                                 //even diamond
+    //Even diamond
+    if(diamondSize%2 == 0){
       numberOfSpaces = diamondSize - 2;
       numberOfCharacters = 2;
+
+      //Top half of the diamond
       System.out.println(" ".repeat(diamondSize) + "*");
 
       for(int i = 1; i <= diamondSize; i += 2){
@@ -52,13 +59,14 @@ public class Diamond {
       numberOfSpaces += 2;
       numberOfCharacters -= 2;
 
+      //Bottom half of the diamond
       for(int i = 1; i < diamondSize - 1; i += 2){
         numberOfSpaces += 2;
         numberOfCharacters -= 2;
 
         System.out.println(" ".repeat(numberOfSpaces) + " *".repeat(numberOfCharacters));
       }
-      System.out.println(" ".repeat(diamondSize) + "*");
+      System.out.println(" ".repeat(diamondSize) + "* \n");
     }
   }
 }
